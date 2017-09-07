@@ -18,7 +18,7 @@ body {
     float: left;
     border: solid black 1px;
     text-align: center;
-    background-color: white;
+    background-color: lightgrey;
     /*box-sizing: border-box;*/
 
 }
@@ -30,4 +30,7 @@ body {
     width: 85%;
     height: 481px;
     background-color: red;
+    margin: 50px;
+
 }
+

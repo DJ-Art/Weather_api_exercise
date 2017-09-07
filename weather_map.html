@@ -9,6 +9,13 @@
     <div class="container">
         <h1>Weather Application</h1>
         <br>
+        <h3>Try your location</h3>
+
+            Latitude:
+            <input type="text" name="latitude" placeholder="Enter Latitude" value="">
+        Longitude:
+        <input type="text" name="longitude" placeholder="Enter Longitude" value="">
+        <button>Submit</button>
         <h2>San Antonio</h2>
             <div class="column">
                 <div class="row">
@@ -16,7 +23,7 @@
                     <p><h3>Thursday</h3></p>
                     <p>Sept 7th</p>
                     <p>28.5&#8451/17.5&#8451</p>
-                    
+
                     <Span id="c1"></Span>
                 </div>
                 <div class="row">
@@ -35,10 +42,12 @@
                 </div>
             </div>
     </div>
-    
+
     <div>
+        <div></div>
+
         <!--<form method="post" >-->
-            
+
             <button>Submit</button>
         <!--</form>-->
         
@@ -80,7 +89,7 @@
         });
 
         var mapOptions = {
-            zoom: 18,
+            zoom: 6,
 
             center: {
                 lat: 29.42307,
@@ -89,7 +98,7 @@
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         var geocoder = new google.maps.Geocoder();
-        var address = "15900 La Cantera Pkwy Bldg. #1, San Antonio, TX, 78256";
+        var address = "600 Navarro St, San Antonio TX 78205";
 
         var geocoder = new google.maps.Geocoder();
 
@@ -99,6 +108,13 @@
             } else {
                 alert("Geocoding was not successful - STATUS: " + status);
             }
+        });
+
+        var codeup = { lat: 29.42307, lng: -98.48527 };
+
+        var marker = new google.maps.Marker({
+            position: codeup,
+            map: map
         });
 
     }());

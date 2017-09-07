@@ -45,7 +45,7 @@
     </div>
     <div id="map-canvas"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC-IW87cNVhrlkmHMSgYxnU5heW7FCfhM"></script>
 <script>
     (function(){
         "use strict";
@@ -87,6 +87,19 @@
                 lng: -98.48527
             }
         };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        var geocoder = new google.maps.Geocoder();
+        var address = "15900 La Cantera Pkwy Bldg. #1, San Antonio, TX, 78256";
+
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({"address": address}, function (results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                map.setCenter(results[0].geometry.location);
+            } else {
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+        });
 
     }());
 </script>

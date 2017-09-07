@@ -25,3 +25,9 @@ body {
 .container{
     background-color: #ABDCFD;
 }
+
+#map-canvas {
+    width: 85%;
+    height: 481px;
+    background-color: red;
+}

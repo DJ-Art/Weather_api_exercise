@@ -11,11 +11,18 @@
     (function(){
         "use strict";
 
-        $.get("http://api.openweathermap.org/data/2.5/weather", {
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "c579f1b8e3a3a9ed7a647c1d763d0b15",
-            q:     "San Antonio, TX"
-        }).done(function(data) {
-            console.log(data);
+                lat:    29.423017,
+                       lon:   -98.48527,
+                       units: "imperial",
+                       cnt: 3
+        }).done(function(weather) {
+            var icon = weather.list[0].weather[0].icon;
+            var url = "http://openweathermap.org/img/w/" + icon + ".png"
+            var img = "<img src='" + url + "'>"
+            $("body").append(img);
+            console.log(url);
         });
 
     }());

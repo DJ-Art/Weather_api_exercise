@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+
+}
+.column{
+    margin: 0 auto;
+    width: 95%;
+    /*box-sizing: border-box;*/
+
+
+}
+.row{
+    width: 33.33%;
+    float: left;
+    border: solid black 1px;
+    text-align: center;
+    /*box-sizing: border-box;*/
+
+}
+.container{
+    background-color: #ABDCFD;
+}

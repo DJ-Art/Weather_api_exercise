@@ -12,15 +12,26 @@
         <h2>San Antonio</h2>
             <div class="column">
                 <div class="row">
-                    <p>5000&#8451</p>
+
+                    <p>Thursday</p>
+                    <p>Sept 7th</p>
+                    <p>28.5&#8451/17.5&#8451</p>
                     
                     <Span id="c1"></Span>
                 </div>
                 <div class="row">
-                    <p>5000&#8451</p>
+                    <p>Friday</p>
+                    <p>Sept 8th</p>
+                    <p>28.4&#8451/22.2&#8451</p>
+
+                    <Span id="c2"></Span>
                 </div>
                 <div class="row">
-                    <p>5000&#8451</p> 
+                    <p>Saturday</p>
+                    <p>Sept 9th</p>
+                    <p>29.4&#8451/19.6&#8451</p>
+                    <Span id="c3"></Span>
+
                 </div>
             </div>
     </div>
@@ -42,6 +53,21 @@
             var img = "<img src='" + url + "'>"
             $("#c1").append(img);
             console.log(url);
+
+
+            var icon1 = weather.list[0].weather[0].icon;
+            var url1 = "http://openweathermap.org/img/w/" + icon1 + ".png"
+            var img1 = "<img src='" + url1 + "'>"
+            $("#c2").append(img1);
+            console.log(url1);
+
+            var icon2 = weather.list[0].weather[0].icon;
+            var url2 = "http://openweathermap.org/img/w/" + icon2 + ".png"
+            var img2 = "<img src='" + url2 + "'>"
+            $("#c3").append(img2);
+            console.log(url2);
+
+
         });
 
     }());

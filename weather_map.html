@@ -75,15 +75,12 @@
 
             forecast.list.forEach(function (day) {
                 var html = '<div class="row" id="cast1">' +
-                     +
-                    '<p>' + day.weather.description + '</p>' +
+                    '<p>San Antonio</p>' +
                     '<p>Sept 7th</p>' +
-                    '<p>' + day.main.temp_max + '&#8451/' + day.main.temp_min + '&#8451</p>' +
-                    '' +
+                    '<p>Temp Max/Min' + ' ' + day.main.temp_max + '&#8457/' + day.main.temp_min + '&#8457</p>' +
                     '<Span>' + img + '</Span>' +
                     '</div>';
                 $(".column").append(html);
-                console.log(url);
             });
 //            var icon1 = weather.list[1].weather[0].icon;
 //            var url1 = "http://openweathermap.org/img/w/" + icon1 + ".png"

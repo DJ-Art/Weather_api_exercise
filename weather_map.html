@@ -16,7 +16,7 @@
     Longitude:
     <input type="text" name="longitude" placeholder="Enter Longitude" value="">
     <button>Submit</button>
-    <h2>San Antonio</h2>
+    <h2 id="city"></h2>
     <div class="column">
         <!--<div class="row" id="cast1">-->
 
@@ -72,16 +72,17 @@
             var icon = forecast.list[i].weather[0].icon;
             var url = "http://openweathermap.org/img/w/" + icon + ".png";
             var img = "<img src='" + url + "'>";
-
+            var city = forecast.city.name;
             forecast.list.forEach(function (day) {
                 var html = '<div class="row" id="cast1">' +
-                    '<p>San Antonio</p>' +
-                    '<p>Sept 7th</p>' +
+                    '<p>' +  + '</p>' +
+                    '<p>' +  + '</p>' +
                     '<p>' + day.main.temp_max + '&#8457/' + day.main.temp_min + '&#8457</p>' +
                     '<Span>' + img + '</Span>' +
                     '</div>';
                 $(".column").append(html);
             });
+            $("#city").append(city)
 //            var icon1 = weather.list[1].weather[0].icon;
 //            var url1 = "http://openweathermap.org/img/w/" + icon1 + ".png"
 //            var img1 = "<img src='" + url1 + "'>"

@@ -75,9 +75,11 @@
             var city = forecast.city.name;
             forecast.list.forEach(function (day) {
                 var html = '<div class="row" id="cast1">' +
-                    '<p>' + day.weather[0].description + '</p>' +
-                    '<p><strong></strong>' +  + '</p>' +
-                    '<p>' + day.main.temp_max + '&#8457/' + day.main.temp_min + '&#8457</p>' +
+                    '<p><strong><em>' + day.weather[0].description + '</em></strong></p>' +
+                    '<p><strong><em>Wind Speed: </em></strong>' + day.wind.speed + ' mph</p>' +
+                    '<p><strong><em>Humidity: </em></strong>' + day.main.humidity + '</p>' +
+                    '<p><strong><em>Pressure: </em></strong>' + day.main.pressure + '</p>' +    
+                    '<p>' + Math.round(day.main.temp_max) + '&#8457/' + Math.round(day.main.temp_min) + '&#8457</p>' +
                     '<Span>' + img + '</Span>' +
                     '</div>';
                 $(".column").append(html);
